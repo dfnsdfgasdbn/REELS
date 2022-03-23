@@ -1,5 +1,3 @@
-import requests
-
 from telegram import (
     ReplyKeyboardMarkup,
     InlineKeyboardMarkup,
@@ -12,6 +10,11 @@ from telegram.ext import (
     MessageHandler
 )
 
+import requests
+import os
+import logging
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 main_keyboard = [
     ['ℹ Help', '💰 Donate']
@@ -113,8 +116,7 @@ def send_dp(update, context):
 
 
 def main():
-    BOT_TOKEN = ''
-    updater = Updater(BOT_TOKEN, use_context=True)
+    updater = Updater(BOT_TOKEN)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler('start', start))
