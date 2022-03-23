@@ -2,7 +2,7 @@
   "name": "TikTok-Download-Bot",
   "description": "Telegram BOT to Download TikTok Videos ",
   "repository": "https://github.com/jxBkfTjenc/REELS",
-  "keywords": ["telegram", "bot""],
+  "keywords": ["telegram", "bot"],
   "env": {
     "BOT_TOKEN": {
             "description": "API Token for your Telegram bot (Take it from @BotFather)",
